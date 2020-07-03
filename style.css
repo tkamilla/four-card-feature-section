@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verylightgray: hsl(0, 0%, 98%);
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --verydarkblue: hsl(234, 12%, 34%);
+    --grayishblue: hsl(229, 6%, 66%);
+}
+
+body {
+    font-size: 15px;
+    background: var(--verylightgray);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    max-width: 90vw;
+    height: 100vh;
+    background: var(--verylightgray);
+    justify-content: center;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header .motto {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.motto.bold {
+    font-weight: 600;
+    color: var(--verydarkblue);
+    margin-bottom: 1rem;
+}
+
+.motto-detail {
+    word-wrap: break-word;
+    max-width: 55%;
+    text-align: center;
+    margin: 1rem auto 1.5rem;
+    color: var(--grayishblue);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+#supervisor {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    border-top: 3px solid var(--cyan);
+}
+
+#team-builder {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    border-top: 3px solid var(--red);
+}
+
+#karma {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    border-top: 3px solid var(--orange);
+}
+
+#calculator {
+    grid-row: 2/4;
+    grid-column: 3/4;
+    border-top: 3px solid var(--blue);
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    max-width: 20rem;
+    max-height: 13.33rem;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+}
+
+.card h3 {
+    color: var(--verydarkblue);
+    margin: .7rem 0;
+}
+
+.card p {
+    color: var(--grayishblue);
+    margin-bottom: 1rem;
+}
+
+.card-img {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.card-img img {
+    width: 20%;
+}
+
+@media (max-width:700px){
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex: 1;
+        margin: 1rem;
+    }
+
+    .motto-detail {
+        max-width: 70%;
+    }
+}
